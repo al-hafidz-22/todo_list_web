@@ -1,0 +1,223 @@
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body background */
+body {
+  background-image: url(https://i.pinimg.com/736x/83/4d/14/834d144309673d5786fd6e0f8850ea30.jpg);
+  background-size: cover; /* gambar cover seluruh layar */
+  background-position: center; /* posisi selalu rata tengah */
+  background-repeat: no-repeat; /* jangan diulang */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 15px; /* biar konten gak mepet di layar HP */
+}
+
+/* Main container */
+.todo-app {
+  background: #3b4452; /* slightly lighter dark */
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid #1757b2;
+  box-shadow: 0 0 10px rgba(205, 182, 182, 0.3); /* glow effect */
+  width: 100%;
+  max-width: 600px; /* biar rapi di desktop */
+}
+
+/* Title */
+.todo-app .title h1 {
+  color: #e0e7ff;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+/* efek glow biru pada judul, header tabel, dan tombol FILTER */
+h1,
+th,
+#filter-button {
+  color: #6366f1; /* biru utama */
+  text-shadow: 0 0 1px #6366f1, 0 0 3px #6366f1, 0 0 1px #6366f1;
+}
+
+/* Form */
+#todo-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  flex-wrap: wrap; /* biar input bisa turun ke bawah di layar kecil */
+}
+
+#todo-form input[type="text"],
+#todo-form input[type="date"] {
+  flex: 1;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #2c4466;
+  background: #0f172a;
+  color: #f8fafc;
+  min-width: 140px; /* biar gak terlalu kecil di layar HP */
+}
+
+#todo-form input[type="text"]::placeholder {
+  color: #94a3b8;
+}
+
+#todo-form button {
+  padding: 0 15px;
+  border: none;
+  border-radius: 8px;
+  background: #6366f1;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#todo-form button:hover {
+  background: #4f46e5;
+}
+
+/* Filter & Delete Buttons */
+.todo-filter {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.todo-filter button {
+  flex: 1;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 8px;
+  background: #334155;
+  color: #e0e7ff;
+  cursor: pointer;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.todo-filter button:hover {
+  background: #475569;
+}
+
+#delete-button {
+  background: #6366f1; /* biru seperti tombol tambah */
+  color: #fff;
+}
+
+#filter-button {
+  background: #3b4c63;
+  color: #fff;
+}
+
+/* Table container */
+.table-container {
+  width: 100%;
+  overflow-x: auto; /* scroll horizontal di HP kalau tabel kepanjangan */
+}
+
+/* Table */
+#todo-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #101217;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+#todo-table th,
+#todo-table td {
+  padding: 10px;
+  text-align: center;
+  color: #e0e7ff;
+  font-size: 14px;
+}
+
+#todo-table th {
+  font-size: 13px;
+  background: #0d0f12;
+}
+
+#todo-table tbody tr:nth-child(even) {
+  background: #0f172a;
+}
+
+#todo-table tbody tr td {
+  border-bottom: 1px solid #334155;
+}
+
+#todo-table tbody tr td[colspan="4"] {
+  text-align: center;
+  color: #94a3b8;
+}
+
+/* Dropdown status */
+.status-select {
+  padding: 4px 6px;
+  border-radius: 6px;
+  border: 1px solid #334155; /* border gelap */
+  background: #1e293b; /* background gelap */
+  color: #e0e7ff; /* teks biru muda */
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.status-select:hover {
+  background: #273242;
+}
+
+/* Tombol delete per task */
+.delete-task {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 6px;
+  background: #526989; /* merah lembut */
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.delete-task:hover {
+  background: #dc2626;
+}
+
+/* Responsiveness */
+@media (max-width: 480px) {
+  .todo-app {
+    padding: 20px;
+  }
+
+  .todo-app .title h1 {
+    font-size: 1.5rem;
+  }
+
+  #todo-form input,
+  #todo-form button {
+    font-size: 14px;
+  }
+
+  #todo-table th,
+  #todo-table td {
+    font-size: 12px;
+    padding: 6px;
+  }
+}
+
+/* footer */
+footer {
+  margin-bottom: 50px;
+  text-align: center;
+  color: #779bce; /* abu-abu soft */
+  font-size: 13px;
+  padding: 10px 0;
+}

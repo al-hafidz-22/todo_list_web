@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Todo List App</title>
+  </head>
+  <body>
+    <main>
+      <section class="todo-app">
+        <!-- judul -->
+        <header class="title">
+          <h1>Todo List</h1>
+        </header>
+        <!-- form input -->
+        <form id="todo-form">
+          <input
+            type="text"
+            name="todo-input"
+            id="todo-input"
+            placeholder="Add a todo"
+            required
+            autocomplete="off"
+          />
+          <input type="date" name="todo-date" id="todo-date" required />
+
+          <button type="submit">+</button>
+        </form>
+        <!-- fitur filter dan hapus -->
+        <div class="todo-filter">
+          <button type="button" id="filter-button">FILTER</button>
+          <button type="button" id="delete-button">DELETE ALL</button>
+        </div>
+        <!-- daftar todo dalam tabel -->
+        <div class="table-container">
+          <table id="todo-table">
+            <thead>
+              <tr>
+                <th>TASK</th>
+                <th>DUE DATE</th>
+                <th>STATUS</th>
+                <th>ACTIONS</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="4">No task found</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <footer>
+        <p>&copy; 2025 Todo List App | Created by Al Hafidz</p>
+      </footer>
+    </main>
+  </body>
+  <script src="js/script.js"></script>
+</html>
